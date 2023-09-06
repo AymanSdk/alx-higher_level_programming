@@ -7,8 +7,6 @@
 4. [Examples of High-Level Programming Languages](#examples-of-high-level-programming-languages)
 5. [Choosing the Right High-Level Programming Language](#choosing-the-right-high-level-programming-language)
 6. [Getting Started](#getting-started)
-7. [Contributing](#contributing)
-8. [License](#license)
 
 ---
 
