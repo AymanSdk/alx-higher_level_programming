@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 import sys
 
 count = len(sys.argv) - 1
@@ -10,4 +9,4 @@ elif count == 1:
 else:
     print("{} arguments:".format(count))
 for i in range(count):
-     print("{}: {}".format(i + 1, sys.argv[i + 1]))
+    print("{}: {}".format(i + 1, sys.argv[i + 1]))
