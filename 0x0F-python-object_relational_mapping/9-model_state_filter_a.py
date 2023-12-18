@@ -1,29 +1,26 @@
 #!/usr/bin/python3
-"""
-python file that contains the class definition
-of a State and an instance Base = declarative_base()
-"""
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import declarative_base, sessionmaker
-from model_state import State
+'''Prints all State objects with a name that contains 'a' in a database.
+'''
+import sys
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
-Base = declarative_base()
+from model_state import Base, State
 
 
-if __name__ == "__main__":
-    from sqlalchemy import create_engine
-    import sys
-
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-        sys.argv[1],
-        sys.argv[2],
-        sys.argv[3]
-    ), pool_pre_ping=True)
-    Base.metadata.create_all(engine)
-
-    Session = sessionmaker(bind=engine)
-    session = Session()
-
-    data = session.query(State).filter(State.name.like('%a%'))
-    for d in data:
-        print(d)
+if __name__ == '__main__':
+    if len(sys.argv) >= 4:
+        user = sys.argv[1]
+        pword = sys.argv[2]
+        db_name = sys.argv[3]
+        DATABASE_URL = "mysql://{}:{}@localhost:3306/{}".format(
+            user, pword, db_name
+        )
+        engine = create_engine(DATABASE_URL)
+        Base.metadata.create_all(engine)
+        session = sessionmaker(bind=engine)()
+        result = session.query(State).order_by(State.id.asc()).filter(
+            State.name.like('%a%')
+        )
+        for res in result:
+            print('{}: {}'.format(res.id, res.name))

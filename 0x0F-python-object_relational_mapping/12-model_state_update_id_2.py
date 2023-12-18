@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Deletes all State objects with 'a' in its name in a database.
+'''Updates a State object in a database.
 '''
 import sys
 from sqlalchemy import create_engine
@@ -19,7 +19,8 @@ if __name__ == '__main__':
         engine = create_engine(DATABASE_URL)
         Base.metadata.create_all(engine)
         session = sessionmaker(bind=engine)()
-        session.query(State).filter(State.name.like('%a%')).delete(
+        session.query(State).filter(State.id == 2).update(
+            {State.name: 'New Mexico'},
             synchronize_session=False
         )
         session.commit()
