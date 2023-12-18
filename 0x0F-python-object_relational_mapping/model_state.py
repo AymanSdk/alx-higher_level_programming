@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Class definition of City
+Class definition of City
 """
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import declarative_base
