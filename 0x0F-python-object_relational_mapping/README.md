@@ -1,6 +1,4 @@
-Certainly! Here's an example of a markdown explanation about relational mapping in Python:
 
----
 
 # Relational Mapping in Python
 
