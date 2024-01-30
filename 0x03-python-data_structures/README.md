@@ -1,4 +1,5 @@
 # Python Data Structures: Lists and Tuples
+[![PyCodeStyle](https://img.shields.io/badge/code%20style-pep8-brightgreen.svg)](https://github.com/PyCQA/pycodestyle)
 
 This README provides an overview of two fundamental data structures in Python: Lists and Tuples. These data structures are essential for organizing and manipulating collections of data in Python. Understanding how to use lists and tuples effectively is crucial for any Python programmer.
 
