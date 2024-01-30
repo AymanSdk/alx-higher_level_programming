@@ -1,5 +1,6 @@
 # High-Level Programming Languages
-[![PyCodeStyle](https://img.shields.io/badge/code%20style-pep8-brightgreen.svg)](https://github.com/PyCQA/pycodestyle) ![Static Badge](https://img.shields.io/badge/Author-Aymane%20Sadiki-blue)
+[![PyCodeStyle](https://img.shields.io/badge/code%20style-pep8-brightgreen.svg)](https://github.com/PyCQA/pycodestyle) ![Static Badge](https://img.shields.io/badge/Author-Aymane%20Sadiki-blue?style=for-the-badge)
+
 
 
 
