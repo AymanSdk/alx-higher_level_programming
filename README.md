@@ -1,4 +1,5 @@
 # High-Level Programming Languages README
+![Static Badge](https://img.shields.io/badge/Code%20style-betty-green)
 
 ## Table of Contents
 1. [Introduction](#introduction)
